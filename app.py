@@ -1,7 +1,7 @@
 import streamlit as st
 from response import get_gemini_response
 
-st.set_page_config(page_title="Marvel Chatbot", page_icon="🦸", layout="wide")
+st.set_page_config(page_title="Marvel", page_icon="🦸", layout="wide")
 
 st.title("🦸 Marvel Chatbot")
 st.write("Chat with your friendly Marvel assistantBFF!")
