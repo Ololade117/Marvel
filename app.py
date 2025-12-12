@@ -1,4 +1,5 @@
 import streamlit as st
+from response import get_gemini_response
 
 st.set_page_config(page_title="Marvel Chatbot", page_icon="🦸", layout="wide")
 
@@ -23,7 +24,7 @@ if prompt := st.chat_input("Ask me anything about Marvel..."):
     
     # Generate response
     with st.chat_message("assistant"):
-        response = f"Marvel assistant: I'm here to help! You asked: '{prompt}'. How can I assist you further?"
+        response = get_gemini_response(prompt)
         st.markdown(response)
     
     # Add assistant message to history
