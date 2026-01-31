@@ -10,7 +10,7 @@ def get_gemini_response(message: str) -> str:
     Returns:
         The AI-generated response as a string
     """
-    genai.configure(api_key="AIzaSyCAlkbyfWOuYsCzeNkjcTf_zYhaIjC9H5A")
+    genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
     
     model = genai.GenerativeModel("models/gemini-2.5-flash")
     response = model.generate_content(message)
