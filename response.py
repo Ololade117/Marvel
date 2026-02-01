@@ -1,4 +1,5 @@
 import google.generativeai as genai
+import streamlit as st
 
 def get_gemini_response(message: str) -> str:
     """
